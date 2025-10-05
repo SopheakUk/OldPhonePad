@@ -27,12 +27,11 @@ public static class Nokia
 
         foreach (char pad in input ?? string.Empty)
         {
-            if (pad == '#') break;
-            else if (pad == '*')
+            if (pad == '*')
             {
                 ResetCurrentPad();
             }
-            else if (pad == ' ')
+            else if (pad is ' ' or '#')
             {
                 GenerateRealCharacterAndResetCurrentPad();
             }
